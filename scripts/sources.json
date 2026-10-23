@@ -1,0 +1,12 @@
+{
+  "feeds": [
+    {"name": "CISA Cybersecurity Advisories", "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml", "kind": "advisory", "official": true},
+    {"name": "CERT/CC Vulnerability Notes", "url": "https://www.kb.cert.org/vuls/atomfeed/", "kind": "advisory", "official": true},
+    {"name": "Microsoft Security Response Center", "url": "https://api.msrc.microsoft.com/update-guide/rss", "kind": "advisory", "official": true},
+    {"name": "BleepingComputer", "url": "https://www.bleepingcomputer.com/feed/", "kind": "news", "official": false},
+    {"name": "Krebs on Security", "url": "https://krebsonsecurity.com/feed/", "kind": "news", "official": false},
+    {"name": "The Hacker News", "url": "https://feeds.feedburner.com/TheHackersNews", "kind": "news", "official": false}
+  ],
+  "kevUrl": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+  "nvdDays": 7
+}
