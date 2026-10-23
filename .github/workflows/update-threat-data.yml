@@ -1,0 +1,26 @@
+name: Update threat data
+on:
+  schedule: [{cron: '17 */6 * * *'}]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: update-threat-data
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 20}
+      - run: node tests/test.mjs
+      - run: node scripts/update-data.mjs
+      - name: Validate JSON before committing
+        run: |
+          for f in data/kev.json data/news.json data/cves.json; do
+            node -e "const j=JSON.parse(require('fs').readFileSync('$f'));if(!Array.isArray(j.items))process.exit(1)" || { echo "Invalid $f"; exit 1; }
+          done
+      - name: Commit changes
+        run: |
+          git config user.name "otw-bot"; git config user.email "otw-bot@users.noreply.github.com"
+          git add data/*.json
+          git diff --cached --quiet || git commit -m "Update threat data snapshots" && git push
