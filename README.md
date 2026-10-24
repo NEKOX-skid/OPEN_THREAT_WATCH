@@ -6,6 +6,8 @@
 
 [Live site](https://nekox-skid.github.io/OPEN_THREAT_WATCH/) | [Contact](CONTACT.md) | [Security](SECURITY.md) | [License](LICENSE)
 
+**Contact:** [TikTok @nekox_exe](https://www.tiktok.com/@nekox_exe) | [Telegram @NEKOX_EXE](https://t.me/NEKOX_EXE) | [NEKOX11@proton.me](mailto:NEKOX11@proton.me)
+
 Open Threat Watch is a public cybersecurity intelligence dashboard. It collects the latest CVEs, CISA Known Exploited Vulnerabilities, security advisories and threat news from public sources and shows them in one place, with source links and freshness labels.
 
 It is **database-free, account-free and anonymous by design**: a static website (HTML, CSS, vanilla JavaScript) hosted on GitHub Pages, plus a scheduled GitHub Action that saves public data as JSON snapshots in this repository.
