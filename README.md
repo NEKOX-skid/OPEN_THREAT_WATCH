@@ -117,7 +117,9 @@ Report security issues in this project privately through the **Security** tab ->
 - [NIST National Vulnerability Database](https://nvd.nist.gov/developers/vulnerabilities)
 - [CISA Known Exploited Vulnerabilities Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
 - Public RSS/Atom feeds listed in `scripts/sources.json`
+## Contact
 
+Questions, feed suggestions or feedback: see [CONTACT.md](CONTACT.md) (TikTok, Telegram and email).
 This product uses data from the NVD API but is not endorsed or certified by the NVD. Each item links to its original source. OTW shows only short excerpts and does not republish full articles.
 
 ## License
