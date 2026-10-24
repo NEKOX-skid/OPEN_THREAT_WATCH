@@ -5,7 +5,7 @@ Sources: NIST NVD API, CISA KEV JSON, and RSS/Atom feeds listed in `scripts/sour
 
 ## Run locally
 ```bash
-git clone https://github.com/USERNAME/REPOSITORY.git && cd REPOSITORY
+git clone https://github.com/NEKOX-skid/OPEN_THREAT_WATCH.git && cd REPOSITORY
 node tests/test.mjs            # parser/validation tests
 node scripts/update-data.mjs   # fetch real data (needs internet, Node 20+)
 python3 -m http.server 8080    # open http://localhost:8080
@@ -16,9 +16,9 @@ Opening index.html via file:// will not load the snapshots; use a local server.
 1. Create a public GitHub repo, then:
 ```bash
 git init && git add . && git commit -m "Initial commit"
-git branch -M main && git remote add origin https://github.com/USERNAME/REPOSITORY.git && git push -u origin main
+git branch -M main && git remote add origin https://github.com/NEKOX-skid/OPEN_THREAT_WATCH.git && git push -u origin main
 ```
-2. Settings > Pages > Source: "Deploy from a branch", Branch `main`, folder `/ (root)`. Site: `https://USERNAME.github.io/REPOSITORY/`. All paths are relative and routing uses `#/hash`, so project URLs work.
+2. Settings > Pages > Source: "Deploy from a branch", Branch `main`, folder `/ (root)`. Site: `https://nekox-skid.github.io/OPEN_THREAT_WATCH/`. All paths are relative and routing uses `#/hash`, so project URLs work.
 3. Settings > Actions > General > Workflow permissions: "Read and write permissions". Then Actions tab > "Update threat data" > Run workflow. It then runs every 6 hours.
 
 Until the first run, the site shows empty states ("No data has been generated yet"). It ships no fabricated records.
